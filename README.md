@@ -1,7 +1,13 @@
-# SrealesInsight PY ## Sobre o projeto
-O SalesInsight PY é um pipeline completo de análise de dados de vendas desenvolvido em Python.
+# Seales Insight PY 
+
+## Sobre o projeto
+
+O Sales Insight PY é um pipeline completo de análise de dados de vendas desenvolvido em Python.
 O sistema lê, limpa, transforma e visualiza um dataset de vendas, gerando métricas,
-segmentações e projeções simples de tendência. ## O que o sistema analisa
+segmentações e projeções simples de tendência. 
+
+## O que o sistema analisa
+
 -	Receita total e volume de vendas por mês e trimestre
 -	Top produtos e categorias por receita
 -	Desempenho por região
@@ -10,6 +16,7 @@ segmentações e projeções simples de tendência. ## O que o sistema analisa
 -	Exportação de relatórios em CSV e JSON 
 
 ## Objetivo
+
 Praticar os principais conceitos do Módulo 01 de IA para Análise Preditiva:
 
 -	Lógica de programação com Python
@@ -37,7 +44,7 @@ Praticar os principais conceitos do Módulo 01 de IA para Análise Preditiva:
 
 1.	Instale o Python 3.10+ e o VS Code.
 2.	Instale as dependências: pip install pandas numpy matplotlib seaborn
-3. Execute no terminal: python salesinsight.py
+3.  Execute no terminal: python salesinsight.py
 
 
 salesinsight-py/
@@ -46,15 +53,16 @@ salesinsight-py/
 ├── vendas.csv código ou externo    # Dataset de vendas (gerado pelo próprio código)
 ├── README.md                       # Este arquivo
 └── outputs/
-    ├── metricas_por_mes.csv
-    ├── segmentacao_clientes.csv
-    ├── estatisticas_gerais.json
-    └── graficos/
-        ├── vendas_por_mes.png
-        ├── top_produtos.png
-        └── distribuicao_regioes.png
+|    ├── metricas_por_mes.csv
+|    ├── segmentacao_clientes.csv
+|    ├── estatisticas_gerais.json
+|    └── graficos/
+|        ├── vendas_por_mes.png
+|        ├── top_produtos.png
+|        └── distribuicao_regioes.png
 
 ## Ferramentas utilizadas
+
 -	Python 3.10+
 -	Google Colab / VS Code
 -	Bibliotecas: pandas, numpy, matplotlib, seaborn, re, json, datetime, os, random
