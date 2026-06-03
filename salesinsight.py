@@ -129,6 +129,7 @@ def criar_colunas_derivadas(df):
   # Receita total por linha de venda
 
   df["receita_total"] = df["quantidade"] * df["preco_unitario"]
+  df["receita_total"] = df["receita_total"].astype(float)
 
   # Extração de componentes de data
 
@@ -202,7 +203,7 @@ def segmentar_clientes(df):
 
   """Segmenta clientes pelo total gasto usando groupby e lambda."""
 
-  clientes = df.groupby("cliente")["receita_total"].sum().reset_index()
+  clientes = df.groupby("cliente")["receita_total"].sum().round(2).reset_index()
   clientes.columns = ["cliente", "total_gasto"]
 
   # Classificação usando função lambda com condicionais
