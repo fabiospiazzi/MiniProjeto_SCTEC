@@ -177,6 +177,13 @@ def calcular_metricas(df):
   .sort_values(ascending=False).head(5).reset_index()
   metricas["top_produtos"] = top_produtos
 
+  # NOVO -------------------------------------------------
+  # Receita por faixa_receita_item
+  # Agrupamento por: valor baixo, médio e alto
+  # NOVO -------------------------------------------------
+  por_faixa = df.groupby("faixa_receita_item")["receita_total"].sum().reset_index()
+  metricas["por_faixa"] = por_faixa
+
   # Receita por categoria
 
   por_categoria = df.groupby("categoria")["receita_total"].sum().reset_index()
@@ -242,6 +249,17 @@ def calcular_estatisticas_numpy(df):
   print(f"	Receita total: R$ {total:.2f}")
   print(f"	Percentil 25 (Q1): R$ {p25:.2f}")
   print(f"	Percentil 75 (Q3): R$ {p75:.2f}")
+
+  # NOVO -------------------------------------
+  # Receita média por faixa_receita_item (ouro, prata ou bronze) com NUMPY
+  # NOVO -------------------------------------
+
+  receita_faixa_alto = np.mean(receitas[df["faixa_receita_item"] == "Alto Valor"])
+  receita_faixa_medio = np.mean(receitas[df["faixa_receita_item"] == "Médio Valor"])
+  receita_faixa_baixo = np.mean(receitas[df["faixa_receita_item"] == "Baixo Valor"])
+  print(f"\nReceita média por faixa_receita_item (alto): R$ {receita_faixa_alto:.2f}")
+  print(f"Receita média por faixa_receita_item (médio): R$ {receita_faixa_medio:.2f}")
+  print(f"Receita média por faixa_receita_item (baixo): R$ {receita_faixa_baixo:.2f}")
 
   # Broadcasting: normalizar receitas entre 0 e 1
 
