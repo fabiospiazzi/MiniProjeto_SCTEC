@@ -325,6 +325,21 @@ def gerar_visualizacoes(df, metricas, output_dir="outputs/graficos"):
   plt.savefig(caminho, dpi=150)
   plt.close()
   print(f" Gráfico exportado: {caminho}")
+
+# --- Gráfico NOVO ---
+
+# --- Gráfico 4: Distribuição de Receita por Periférico (PIZZA) ---
+
+  fig, ax = plt.subplots()
+  por_categoria = metricas["por_categoria"]
+  ax.pie(por_categoria["receita_total"], labels=por_categoria["categoria"], autopct="%1.1f%%", startangle=90)
+  ax.set_title("Distribuição de Receita por Categoria")
+  plt.tight_layout()
+  caminho = os.path.join(output_dir, "distribuicao_categorias.png")
+  plt.savefig(caminho, dpi=150)
+  plt.close()
+  print(f" Gráfico exportado: {caminho}")
+
   print("\n=== VISUALIZAÇÕES GERADAS COM SUCESSO ===")
 
 # RF09 - Criar uma Classe para o Pipeline - OK ---------------------------
