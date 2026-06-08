@@ -1,4 +1,4 @@
-# Seales Insight PY 
+# Sales Insight PY 
 
 ## Sobre o projeto
 
@@ -32,7 +32,9 @@ Praticar os principais conceitos do Módulo 01 de IA para Análise Preditiva:
 -   atplotlib e Seaborn: gráficos, customização e exportação em PNG
 -	Classes, construtores, atributos, métodos, herança e super()
 -	GitHub, branches, commits e GitFlow simplificado
--	Kanban para organização do projeto ## Como executar
+-	Kanban para organização do projeto 
+
+## Como executar
 
 ### No Google Colab (recomendado)
 
@@ -60,14 +62,15 @@ salesinsight-py/
 |        ├── vendas_por_mes.png
 |        ├── top_produtos.png
 |        └── distribuicao_regioes.png
+|        └── driestribuicao_regioes.png
 
 ## Ferramentas utilizadas
 
 -	Python 3.10+
 -	Google Colab / VS Code
 -	Bibliotecas: pandas, numpy, matplotlib, seaborn, re, json, datetime, os, random
--	GitHub + GitHub Desktop para versionamento
--	Trello / GitHub Projects para Kanban
+-	GitHub + GitBash para versionamento
+-	GitHub Projects para Kanban
 
 ## Sobre var, let e const (Python equivalente)
 
@@ -82,4 +85,4 @@ o servidor processaria e retornaria os dados — seguindo a arquitetura cliente-
 Bibliotecas como `requests` permitem consumir essas APIs diretamente no Python.
 
 ## Vídeo de demonstração
-# Link youtube: 
+# Link GOOGLE DRIVE: https://drive.google.com/drive/folders/1i39rCtdaccpM0Nebg2TlgnAe2cNyxI22?usp=sharing 

@@ -210,6 +210,8 @@ def segmentar_clientes(df):
 
   """Segmenta clientes pelo total gasto usando groupby e lambda."""
 
+  # Adicioneio o .round(2) ao código original ----------------------------------------
+
   clientes = df.groupby("cliente")["receita_total"].sum().round(2).reset_index()
   clientes.columns = ["cliente", "total_gasto"]
 
@@ -549,7 +551,7 @@ def exportar_resultados(metricas, clientes, stats_numpy):
 
   os.makedirs("outputs", exist_ok=True)
 
-  # Exportar CSV com métricas por mês
+  # Exportar CSV com métricas por mês - É o mesmo que o relatório resumo
   caminho_csv = "outputs/metricas_por_mes.csv"
   metricas["por_mes"].to_csv(caminho_csv, index=False, encoding="utf-8-sig")
   print(f" CSV exportado: {caminho_csv}")
